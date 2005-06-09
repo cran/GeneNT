@@ -22,7 +22,7 @@ The data matrix file must be in the right format. The first row (header) must be
   \item{bpG2 }{The gene pairs that passed both Stage I (FDR) and II (MAS) screenings}
 }
 \references{
-Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-expressed gene pairs with controlled False Discovery Rate (FDR) and Minimum Acceptable Strength (MAS). \emph{Submitted}.
+Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-expressed gene pairs with controlled False Discovery Rate (FDR) and Minimum Acceptable Strength (MAS). \emph{J Comput Biol, in press}.
 
 Fisher, R.A. (1921). On the 'probable error' of a coefficient of correlation deduced from a small sample. \emph{Metron}, \bold{1}, 1--32.
 }

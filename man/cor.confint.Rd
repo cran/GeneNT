@@ -21,7 +21,7 @@ The function use Fisher transformation to approximate p-values and confidence in
 }
 \references{
 
-Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-expressed gene pairs with controlled False Discovery Rate (FDR) and Minimum Acceptable Strength (MAS). \emph{Submitted}.
+Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-expressed gene pairs with controlled False Discovery Rate (FDR) and Minimum Acceptable Strength (MAS). \emph{J Comput Biol}.
 
 Schäfer, J., and K. Strimmer. (2004) An empirical Bayes approach to inferring large-scale gene association networks. \emph{Bioinformatics}, \bold{1}, 1-13.
 
