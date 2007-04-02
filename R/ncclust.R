@@ -43,6 +43,5 @@ ncclust <- function(p, pG2, kG2)
    obj <- hclust(d)
    write.table(obj$label[obj$order], sep = "\t", file = "label.tsv")   
    cat("The Network constrained distance matrix and dendrogram labels have been written to the default directory!")   
-   plot(obj, label = F, hang = 0, main = "Network constrained clustering", sub = "", xlab = "" )
 }
 

@@ -6,8 +6,8 @@ sm.name <- function (m)
     k <- 1
     for (i in 1:(l - 1)){ 
 	for (j in (i + 1):l) {
-        index1[k] <- names(m[i])
-        index2[k] <- names(m[j])
+        index1[k] <- row.names(m)[i]
+        index2[k] <- row.names(m)[j]
         k <- k + 1
     }
     }

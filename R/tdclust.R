@@ -7,6 +7,6 @@ tdclust <- function(p)
    write.table(D, sep = "\t", file = "D.tsv")
    d <- as.dist(D)
    obj <- hclust(d)
-   plot(obj, label = F, hang = 0, main = "Traditional clustering", sub = "", xlab = "" )
+   plot(obj, label = FALSE, hang = 0, main = "Traditional clustering", sub = "", xlab = "" )
 }
 

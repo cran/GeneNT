@@ -26,15 +26,15 @@ Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-e
 Schäfer, J., and K. Strimmer. (2004) An empirical Bayes approach to inferring large-scale gene association networks. \emph{Bioinformatics}, \bold{1}, 1-13.
 
 }
-\author{Dongxiao Zhu (\url{http://www-personal.umich.edu/~zhud})}
+\author{Dongxiao Zhu (\url{http://dongxiaozhu.googlepages.com/home})}
 
 \seealso{\code{\link{kendall.confint}}}
 \examples{
-#simulate a vector of correlation coefficients 
-#cor <- runif(20, -1, 1) 
-#g6 <- cor.confint(cor, 20, 0.05)
-#g6$conf.int1
-#g6$conf.int2
+## simulate a vector of correlation coefficients 
+cor <- runif(20, -1, 1) 
+g6 <- cor.confint(cor, 20, 0.05)
+g6$conf.int1
+g6$conf.int2
 }
 \keyword{cluster}
 \keyword{htest}

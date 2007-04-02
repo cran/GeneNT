@@ -22,34 +22,35 @@ This function returns a network constrained distance matrix that can be used by 
 Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-expressed gene pairs with controlled False Discovery Rate (FDR) and Minimum Acceptable Strength (MAS). \emph{J Comput Biol, in press}.
 Zhu, D., Hero, A.O., Hong, C., Khanna, R., and Swaroop A. Network constrained clustering for gene microarray data. {\it Submitted}
 }
-\author{Dongxiao Zhu (http://www-personal.umich.edu/~zhud)}
+\author{Dongxiao Zhu (http://dongxiaozhu.googlepages.com/home)}
 
 \seealso{\code{\link{tdclust}}}
 \examples{
-# load GeneNT and GeneTS library
-library(GeneTS)
-library(GeneNT)
+## load GeneNT library
+library(RBGL)
 library(e1071)
+library(GeneNT)
 
-#EITHER use the internal dataset
+## load example dataset
 data(dat) 
-#OR use the following if you want to import external data 
-#dat <- read.table("gal.txt", h = T, row.names = 1) 
-#Note, data matrix name has to be "dat"
-#use (FDR, MAS) criteria (0.2, 0.5) as example to screen gene pairs
-#g1 <- corfdrci(0.2, 0.5)  
-#pG1 <- g1$pG1
-#pG2 contains gene pairs that passed two-stage screening
-#pG2 <- g1$pG2  
-#use (FDR, MAS) criteria (0.2, 0.5) as example to screen gene pairs 
-#g2 <- kendallfdrci(0.2, 0.5) 
-#kG1 <- g2$kG1
-#kG2 contains gene pairs that passed two-stage screening
-#kG2 <- g2$kG2 
-#generate Pajek compatible matrix to visualize network
-#getBM(pG2, kG2) 
-#clustering from network using network constraint clustering
-#ncclust(3, pG2, kG2) 
+## Note, data matrix name has to be "dat"
+
+## use (FDR, MAS) criteria (0.2, 0.5) as example to screen gene pairs 
+## use "BY" procedure to do multiple comparison adjustment
+g1 <- corfdrci(0.2, 0.5, "BY") 
+pG1 <- g1$pG1
+## pG2 contains gene pairs that passed two-stage screening
+pG2 <- g1$pG2  
+## use (FDR, MAS) criteria (0.2, 0.5) as example to screen gene pairs
+## use "BY" procedure to do multiple comparison adjustment 
+g2 <- kendallfdrci(0.2, 0.5, "BY") 
+kG1 <- g2$kG1
+## kG2 contains gene pairs that passed two-stage screening
+kG2 <- g2$kG2  
+## generate Pajek compatible matrix to visualize network
+getBM(pG2, kG2) 
+## clustering from network using network constraint clustering, for example, p = 6.
+ncclust(6, pG2, kG2) 
 }
 \keyword{cluster}
 \keyword{htest}

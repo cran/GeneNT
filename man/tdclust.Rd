@@ -19,21 +19,18 @@ This function returns a distance matrix that can be used by any distance based c
 \references{
 Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-expressed gene pairs with controlled False Discovery Rate (FDR) and Minimum Acceptable Strength (MAS). \emph{J. Comput. Biol, in press}.
 }
-\author{Dongxiao Zhu (\url{http://www-personal.umich.edu/~zhud})}
+\author{Dongxiao Zhu (\url{http://dongxiaozhu.googlepages.com/home})}
 
 \seealso{\code{\link{ncclust}}}
 \examples{
-# load GeneNT and GeneTS library
-library(GeneTS)
+## load GeneNT library
 library(GeneNT)
 
-#EITHER use the example dataset
+## load example dataset
 data(dat) 
-#OR use the following if you want to import external data 
-#dat <- read.table("gal.txt", h = T, row.names = 1) 
-#Note, data matrix name has to be "dat"
-#Regular hierarchical clustering, for example, p = 3.
-#tdclust(3)
+## Note, data matrix name has to be "dat"
+## Regular hierarchical clustering, for example, p = 1.
+tdclust(1)
 }
 \keyword{cluster}
 \keyword{htest}

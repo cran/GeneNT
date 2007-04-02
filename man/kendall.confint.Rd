@@ -23,13 +23,13 @@ Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-e
 
 Hollander M. and Wolfe D.A. (1999). Nonparametric Statistical Methods, New York: Wiley.
 }
-\author{Dongxiao Zhu (\url{http://www-personal.umich.edu/~zhud})}
+\author{Dongxiao Zhu (\url{http://dongxiaozhu.googlepages.com/home})}
 
 \seealso{\code{\link{cor.confint}}}
 \examples{
 x <- runif(20, -1, 1)
 y <- runif(20, -1, 1)
-#kendall.confint(x,y,0.05)
+kendall.confint(x,y,0.05)
 }
 \keyword{cluster}
 \keyword{htest}

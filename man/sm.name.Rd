@@ -16,23 +16,20 @@ Returns a vector object of gene names.
 \references{
 Zhu, D., Hero, A.O., Qin, Z.S. and Swaroop, A. High throughput screening of co-expressed gene pairs with controlled False Discovery Rate (FDR) and Minimum Acceptable Strength (MAS). \emph{Submitted}.
 }
-\author{Dongxiao Zhu (http://www-personal.umich.edu/~zhud)}
+\author{Dongxiao Zhu (http://dongxiaozhu.googlepages.com/home)}
 
 \seealso{\code{\link{row.names}}}
 \examples{
-# load GeneNT and GeneTS library
-library(GeneTS)
+## load GeneNT library
 library(GeneNT)
 
-#EITHER use the example dataset
+## load example dataset
 data(dat) 
-#OR use the following if you want to import external data 
-#dat <- read.table("gal.txt", h = T, row.names = 1) 
-#Note, data matrix name has to be "dat"
-#calculate correlation matrix
+## Note, data matrix name has to be "dat"
+## calculate correlation matrix
 M <- cor(t(dat)) 
-#extract gene names (matrix object) from the correlation matrix
-#NL <- sm.name(M) 
+## extract gene names (matrix object) from the correlation matrix
+NL <- sm.name(M) 
 }
 \keyword{cluster}
 \keyword{htest}
